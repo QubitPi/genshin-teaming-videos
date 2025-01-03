@@ -1,28 +1,30 @@
-Genshin Impact Team Showcase Web App
-====================================
+原神配队展示应用
+================
+
+[![原神](https://img.shields.io/badge/原神-【烬火】胡桃-FF5A35?style=for-the-badge&logo=mihoyo&logoColor=white&labelColor=4EA4DD)](https://enka.network/u/MyFavoriteCharacters)
 
 ![Node Version][node version badge]
 [![GitHub workflow status badge][GitHub workflow status badge]][GitHub workflow status URL]
 [![Apache License][Apache License Badge]][Apache License, Version 2.0]
 
-How Project Started
--------------------
+缘起
+----
 
-I use [enka.network](https://enka.network/u/MyFavoriteCharacters/) to showcase my favorite Genshin Impact characters.
-It's been a fun experience except that the site doesn't support team showcasing very well. In fact, one of the reason
-for me to play Genshi Impact is to train myself the skill of __team design__ using the uniqueness of each of my beloved
-characters. So initiated this project to __showcase my Genshin team I've been proud of in the game__
+在使用 [enka.network](https://enka.network/u/MyFavoriteCharacters/) 很长的一段时间里，我对它的角色展示功能一直很满意，
+但在配队展示方面却不尽然。和很多玩家一样，我玩原神最大的乐趣在于培养自己的团队搭建能力 - 根据每个喜欢角色的特点，
+搭配出高伤害的配队。而 enka.network 无法满足我在这个方面的个性化需求，所以我编写了这个项目。项目处于初期 PoC 阶段，
+我会抽空逐步实现新功能、新内容、新体验，敬请期待。
 
-Development
------------
+开发文档
+--------
 
 > [!IMPORTANT]
 >
-> VK 45.01 requires Node 18 or above
+> 开发要求 Node 18 或以上版本
 
-### Starting Locally
+### 本地启动
 
-To start web app locally:
+执行如下命令：
 
 ```console
 git@github.com:QubitPi/genshin-teaming-videos.git
@@ -31,10 +33,10 @@ yarn
 yarn start
 ```
 
-Then visit [localhost:3000](http://localhost:3000/)
+然后访问 [localhost:3000](http://localhost:3000/) 即可
 
-License
--------
+开源许可
+--------
 
 The use and distribution terms for [genshin-teaming-video]() are covered by the [Apache License, Version 2.0].
 
