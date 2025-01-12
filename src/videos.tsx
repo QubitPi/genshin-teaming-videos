@@ -26,6 +26,7 @@ const WAN_YE     = IMG_RESOURCE_PATH + "wanye.png"
 export const videos = [
   {
     "youtubeVideoId": "6L6V_TnSAS8",
+    "bilibiliVideoId": "BV1pprrYeEe5",
     "character1": XIAO_GONG,
     "character2": XIANG_LING,
     "character3": CITLALI,
@@ -33,6 +34,7 @@ export const videos = [
   },
   {
     "youtubeVideoId": "87Gbj5zmdx4",
+    "bilibiliVideoId": "BV1rQcFewEHc",
     "character1": HU_TAO,
     "character2": XIANG_LING,
     "character3": CITLALI,

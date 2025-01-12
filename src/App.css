@@ -89,12 +89,6 @@ body {
     display: none;
 }
 
-.item .content video {
-    left: 100px;
-    width: 600px;
-    border-radius: 2rem;
-}
-
 .item .content iframe {
     left: 100px;
     width: 600px;
