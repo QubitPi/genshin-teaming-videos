@@ -14,15 +14,17 @@
  * limitations under the License.
  */
 
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {videos as data} from "./videos"
 
+const UNDEFINED = ""
 
 function App() {
 
   const teams: {
     youtubeVideoId: string,
+    bilibiliVideoId: string
     character1: string,
     character2: string,
     character3: string,
@@ -30,24 +32,48 @@ function App() {
   }[] = data
   const [displayedTeamIdx, setDisplayedTeamIdx] = useState(0)
 
+  const [country, setCountry] = useState<string>(UNDEFINED)
+
+  useEffect(() => {
+    const fetchUserCountry = async () => {
+      // It is safe to expose this token '66396cc3f3c8d8' publicly because the token is being protected by a whitelist
+      // ( https://ipinfo.io/account/token )
+      fetch("https://ipinfo.io/json?token=66396cc3f3c8d8")
+          .then((response: any) => response.json())
+          .then((data: any) => setCountry(data["country"]))
+    }
+
+    if (country === UNDEFINED) {
+      fetchUserCountry()
+    }
+  });
+
   return (
       <div className="container">
         <div className="slide">
           <div className="item" style={{backgroundImage: "url(/img/background.PNG)"}}>
             <div className="content">
-              <iframe
-                  src={`https://www.youtube.com/embed/${teams[displayedTeamIdx].youtubeVideoId}`}
-                  title={"gaming video"}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen></iframe>
+              {
+                country === "CN"
+                    ?
+                    <iframe
+                        width="100%"
+                        title={"原神配队视频"}
+                        src={`//player.bilibili.com/player.html?bvid=${teams[displayedTeamIdx].bilibiliVideoId}`}
+                        scrolling="no" frameBorder="no" allowFullScreen></iframe>
+                    : <iframe
+                        src={`https://www.youtube.com/embed/${teams[displayedTeamIdx].youtubeVideoId}`}
+                        title={"Genshin Teaming Video"}
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen></iframe>
+              }
             </div>
           </div>
           <div className="item" style={{backgroundImage: `url(${teams[displayedTeamIdx].character1})`}}></div>
           <div className="item" style={{backgroundImage: `url(${teams[displayedTeamIdx].character2})`}}></div>
           <div className="item" style={{backgroundImage: `url(${teams[displayedTeamIdx].character3})`}}></div>
           <div className="item" style={{backgroundImage: `url(${teams[displayedTeamIdx].character4})`}}></div>
-
         </div>
 
         <div className="button">

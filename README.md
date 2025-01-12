@@ -10,12 +10,13 @@
 缘起
 ----
 
-在使用 [enka.network](https://enka.network/u/MyFavoriteCharacters/) 很长的一段时间里，我对它的角色展示功能一直很满意，
+在使用 [Enka.Network](https://enka.network/u/MyFavoriteCharacters/) 很长的一段时间里，我对它的角色展示功能一直很满意，
 但在配队展示方面却不尽然。和很多玩家一样，我玩原神最大的乐趣在于培养自己的团队搭建能力 - 根据每个喜欢角色的特点，
-搭配出高伤害的配队。而 enka.network 无法满足我在这方面的展示需求，所以我编写了这个项目。
+搭配出高伤害的配队，而 Enka.Network 无法满足我在这方面的展示需求，所以我编写了这个项目用来展示我的原神配队。
 
-应用地址 - [genshin.qubitpi.org](https://genshin.qubitpi.org/) 项目处于初期 PoC 阶段，我会抽空逐步实现新功能、新内容、
-新体验，敬请期待。
+应用地址 - [genshin.qubitpi.org](https://genshin.qubitpi.org/)
+
+应用处于初期 PoC 阶段，我会抽空逐步实现新功能、新内容、 新体验，敬请期待。
 
 开发文档
 --------
@@ -36,6 +37,15 @@ yarn start
 ```
 
 然后访问 [localhost:3000](http://localhost:3000/) 即可
+
+### 视频加载
+
+我将视频同时上传到了 YouTube 和 B站。如果访问者是大陆用户，则加载 B站 版本，国外访问则加载 YouTube 版本
+
+> [!CAUTION]
+>
+> - 两个版本视频内容完全一样
+> - 本地开发是无法加载 B站 视频的，因为 CORS 限制。YouTube 则没有这个问题。所以本地开发模式会默认加载 YouTube 版本
 
 开源许可
 --------
