@@ -1,4 +1,2 @@
-http://localhost:3000
-file:///.*/genshin-teaming-videos/public/%25PUBLIC_URL%25/logo192.png
-file:///.*/genshin-teaming-videos/public/%25PUBLIC_URL%25/favicon.ico
-file:///.*/genshin-teaming-videos/public/%25PUBLIC_URL%25/manifest.json
+file:///*
+http://localhost/*
