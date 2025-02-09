@@ -20,8 +20,17 @@ import XIAO_GONG from "./img/xiaogong.png";
 import XIANG_LING from "./img/xiangling.png";
 import CITLALI from "./img/citlali.png";
 import WAN_YE from "./img/wanye.png";
+import ARLECCHINO from "./img/arlecchino.png";
 
 export const videos = [
+  {
+    youtubeVideoId: "y4YrZAkzETg",
+    bilibiliVideoId: "BV1ShNmeREon",
+    character1: ARLECCHINO,
+    character2: XIANG_LING,
+    character3: CITLALI,
+    character4: WAN_YE,
+  },
   {
     youtubeVideoId: "6L6V_TnSAS8",
     bilibiliVideoId: "BV1pprrYeEe5",
