@@ -1,5 +1,5 @@
 /**
- * Copyright Jiaqi Liu
+ * Copyright 2025 Jiaqi Liu. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,42 @@ body {
   box-shadow: 0 30px 50px #dbdbdb;
 }
 
-.container .slide .item {
+.video {
+  position: absolute;
+  box-shadow: 0 30px 50px #505050;
+  background-position: 50% 50%;
+  background-size: cover;
+  display: inline-block;
+  transition: 0.5s;
+
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  color: #eee;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: block;
+}
+
+.video .content iframe {
+  left: 100px;
+  width: 600px;
+  height: 468px;
+  border-radius: 2rem;
+}
+
+.character {
   width: 200px;
   height: 300px;
   position: absolute;
@@ -48,69 +83,121 @@ body {
   background-size: cover;
   display: inline-block;
   transition: 0.5s;
+  overflow: hidden;
 }
 
-.slide .item:nth-child(1) {
-  top: 0;
+.character1 {
+  left: 60%;
+}
+
+.character2 {
+  left: calc(60% + 220px);
+}
+
+.character3 {
+  top: 70%;
+  left: 60%;
+}
+
+.character4 {
+  top: 70%;
+  left: calc(60% + 220px);
+}
+
+.card__article {
+  margin-top: 300px;
+}
+
+.card__data {
+  width: 200px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, 0.15);
+  border-radius: 1rem;
+  bottom: -9rem;
   left: 0;
-  transform: translate(0, 0);
-  border-radius: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacity 1s 1s;
 }
 
-.slide .item:nth-child(2) {
-  left: 60%;
-}
-
-.slide .item:nth-child(3) {
-  left: calc(60% + 220px);
-}
-
-.slide .item:nth-child(4) {
-  top: 70%;
-  left: 60%;
-}
-
-.slide .item:nth-child(5) {
-  top: 70%;
-  left: calc(60% + 220px);
-}
-
-.item .content {
-  position: absolute;
-  top: 50%;
-  left: 100px;
-  width: 300px;
-  text-align: left;
-  color: #eee;
-  transform: translate(0, -50%);
-  font-family: system-ui;
-  display: none;
-}
-
-.item .content iframe {
-  left: 100px;
-  width: 600px;
-  height: 468px;
-  border-radius: 2rem;
-}
-
-.slide .item:nth-child(1) .content {
+.card__description {
   display: block;
+  font-size: 0.813rem;
+  margin-bottom: 0.25rem;
 }
 
-@keyframes animate {
-  from {
-    opacity: 0;
-    transform: translate(0, 100px);
-    filter: blur(33px);
-  }
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 15%);
+  margin-bottom: 0.75rem;
+}
 
+.card__button {
+  text-decoration: none;
+  font-size: 0.813rem;
+  font-weight: 500;
+  color: hsl(82, 60%, 28%);
+}
+
+.card__button:hover {
+  text-decoration: underline;
+}
+
+.character:hover .card__article .card__data {
+  animation: show-data 1s forwards;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.character:hover {
+  animation: remove-overflow 2s forwards;
+}
+
+.character:not(:hover) {
+  animation: show-overflow 2s forwards;
+}
+
+.character:not(:hover) .card__article .card__data {
+  animation: remove-data 1s forwards;
+}
+
+@keyframes show-data {
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(-7rem);
+  }
+}
+
+@keyframes remove-overflow {
   to {
-    opacity: 1;
-    transform: translate(0);
-    filter: blur(0);
+    overflow: initial;
+  }
+}
+
+@keyframes remove-data {
+  0% {
+    transform: translateY(-7rem);
+  }
+  50% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
+}
+
+@keyframes show-overflow {
+  0% {
+    overflow: initial;
+    pointer-events: none;
+  }
+  50% {
+    overflow: hidden;
   }
 }
 
@@ -128,7 +215,6 @@ body {
   border: none;
   cursor: pointer;
   margin: 0 5px;
-  border: 1px solid #000;
   transition: 0.3s;
 }
 

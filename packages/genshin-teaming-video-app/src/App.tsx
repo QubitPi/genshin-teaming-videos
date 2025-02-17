@@ -1,5 +1,5 @@
 /**
- * Copyright Jiaqi Liu
+ * Copyright 2025 Jiaqi Liu. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,6 +19,7 @@ import "./App.css";
 import { videos as data } from "./videos";
 
 import background from "./img/background.png";
+import { type Character } from "./Character";
 
 const UNDEFINED = "";
 
@@ -26,10 +27,10 @@ export default function App(): JSX.Element {
   const teams: Array<{
     youtubeVideoId: string;
     bilibiliVideoId: string;
-    character1: string;
-    character2: string;
-    character3: string;
-    character4: string;
+    character1: { character: Character; position: string };
+    character2: { character: Character; position: string };
+    character3: { character: Character; position: string };
+    character4: { character: Character; position: string };
   }> = data;
   const [displayedTeamIdx, setDisplayedTeamIdx] = useState(0);
 
@@ -56,7 +57,7 @@ export default function App(): JSX.Element {
   return (
     <div className="container">
       <div className="slide">
-        <div className="item" style={{ backgroundImage: `url(${background})` }}>
+        <div className="video" style={{ backgroundImage: `url(${background})` }}>
           <div className="content">
             {country === "CN" ? (
               <iframe
@@ -78,10 +79,63 @@ export default function App(): JSX.Element {
             )}
           </div>
         </div>
-        <div className="item" style={{ backgroundImage: `url(${teams[displayedTeamIdx].character1})` }}></div>
-        <div className="item" style={{ backgroundImage: `url(${teams[displayedTeamIdx].character2})` }}></div>
-        <div className="item" style={{ backgroundImage: `url(${teams[displayedTeamIdx].character3})` }}></div>
-        <div className="item" style={{ backgroundImage: `url(${teams[displayedTeamIdx].character4})` }}></div>
+
+        <div
+          className={"character character1"}
+          style={{ backgroundImage: `url(${teams[displayedTeamIdx].character1.character.characterImage})` }}
+        >
+          <article className="card__article">
+            <div className="card__data">
+              <span className="card__description">{teams[displayedTeamIdx].character1.position}</span>
+              <h2 className="card__title">{teams[displayedTeamIdx].character1.character.nameZh}</h2>
+              <a href={teams[displayedTeamIdx].character1.character.configurationURL} className="card__button">
+                配置
+              </a>
+            </div>
+          </article>
+        </div>
+        <div
+          className={"character character2"}
+          style={{ backgroundImage: `url(${teams[displayedTeamIdx].character2.character.characterImage})` }}
+        >
+          <article className="card__article">
+            <div className="card__data">
+              <span className="card__description">{teams[displayedTeamIdx].character2.position}</span>
+              <h2 className="card__title">{teams[displayedTeamIdx].character2.character.nameZh}</h2>
+              <a href={teams[displayedTeamIdx].character2.character.configurationURL} className="card__button">
+                配置
+              </a>
+            </div>
+          </article>
+        </div>
+        <div
+          className={"character character3"}
+          style={{ backgroundImage: `url(${teams[displayedTeamIdx].character3.character.characterImage})` }}
+        >
+          <article className="card__article">
+            <div className="card__data">
+              <span className="card__description">{teams[displayedTeamIdx].character3.position}</span>
+              <h2 className="card__title">{teams[displayedTeamIdx].character3.character.nameZh}</h2>
+              <a href={teams[displayedTeamIdx].character3.character.configurationURL} className="card__button">
+                配置
+              </a>
+            </div>
+          </article>
+        </div>
+        <div
+          className={"character character4"}
+          style={{ backgroundImage: `url(${teams[displayedTeamIdx].character4.character.characterImage})` }}
+        >
+          <article className="card__article">
+            <div className="card__data">
+              <span className="card__description">{teams[displayedTeamIdx].character4.position}</span>
+              <h2 className="card__title">{teams[displayedTeamIdx].character4.character.nameZh}</h2>
+              <a href={teams[displayedTeamIdx].character4.character.configurationURL} className="card__button">
+                配置
+              </a>
+            </div>
+          </article>
+        </div>
       </div>
 
       <div className="button">
