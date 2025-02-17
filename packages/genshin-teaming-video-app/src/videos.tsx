@@ -21,6 +21,9 @@ import XIANG_LING from "./img/xiangling.png";
 import CITLALI from "./img/citlali.png";
 import WAN_YE from "./img/wanye.png";
 import ARLECCHINO from "./img/arlecchino.png";
+import FISCHL from "./img/fischl.png";
+import KE_QING from "./img/keqing.png";
+import YAOYAO from "./img/yaoyao.png";
 
 export const videos = [
   {
@@ -46,5 +49,13 @@ export const videos = [
     character2: XIANG_LING,
     character3: CITLALI,
     character4: BARBARA,
+  },
+  {
+    youtubeVideoId: "i7AbVwyx6mw",
+    bilibiliVideoId: "BV1uywdeMEdR",
+    character1: KE_QING,
+    character2: FISCHL,
+    character3: YAOYAO,
+    character4: WAN_YE,
   },
 ];
