@@ -1,5 +1,5 @@
 /**
- * Copyright Jiaqi Liu
+ * Copyright 2025 Jiaqi Liu. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,49 +13,98 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import HU_TAO from "./img/hutao.png";
-import BARBARA from "./img/barbara.png";
-import XIAO_GONG from "./img/xiaogong.png";
-import XIANG_LING from "./img/xiangling.png";
-import CITLALI from "./img/citlali.png";
-import WAN_YE from "./img/wanye.png";
-import ARLECCHINO from "./img/arlecchino.png";
-import FISCHL from "./img/fischl.png";
-import KE_QING from "./img/keqing.png";
-import YAOYAO from "./img/yaoyao.png";
+import {
+  ARLECCHINO,
+  BARBARA,
+  CITLALI,
+  FISCHL,
+  HU_TAO,
+  KE_QING,
+  WAN_YE,
+  XIANG_LING,
+  XIAO_GONG,
+  YAOYAO,
+} from "./Character";
 
 export const videos = [
   {
     youtubeVideoId: "y4YrZAkzETg",
     bilibiliVideoId: "BV1ShNmeREon",
-    character1: ARLECCHINO,
-    character2: XIANG_LING,
-    character3: CITLALI,
-    character4: WAN_YE,
+    character1: {
+      character: ARLECCHINO,
+      position: "主 C",
+    },
+    character2: {
+      character: XIANG_LING,
+      position: "副 C",
+    },
+    character3: {
+      character: CITLALI,
+      position: "增伤",
+    },
+    character4: {
+      character: WAN_YE,
+      position: "增伤",
+    },
   },
   {
     youtubeVideoId: "6L6V_TnSAS8",
     bilibiliVideoId: "BV1pprrYeEe5",
-    character1: XIAO_GONG,
-    character2: XIANG_LING,
-    character3: CITLALI,
-    character4: WAN_YE,
+    character1: {
+      character: XIAO_GONG,
+      position: "主 C",
+    },
+    character2: {
+      character: XIANG_LING,
+      position: "副 C",
+    },
+    character3: {
+      character: CITLALI,
+      position: "增伤",
+    },
+    character4: {
+      character: WAN_YE,
+      position: "增伤",
+    },
   },
   {
     youtubeVideoId: "87Gbj5zmdx4",
     bilibiliVideoId: "BV1rQcFewEHc",
-    character1: HU_TAO,
-    character2: XIANG_LING,
-    character3: CITLALI,
-    character4: BARBARA,
+    character1: {
+      character: HU_TAO,
+      position: "主 C",
+    },
+    character2: {
+      character: BARBARA,
+      position: "主 C",
+    },
+    character3: {
+      character: XIANG_LING,
+      position: "副 C",
+    },
+    character4: {
+      character: CITLALI,
+      position: "增伤",
+    },
   },
   {
     youtubeVideoId: "i7AbVwyx6mw",
     bilibiliVideoId: "BV1uywdeMEdR",
-    character1: KE_QING,
-    character2: FISCHL,
-    character3: YAOYAO,
-    character4: WAN_YE,
+    character1: {
+      character: KE_QING,
+      position: "主 C",
+    },
+    character2: {
+      character: FISCHL,
+      position: "副 C",
+    },
+    character3: {
+      character: YAOYAO,
+      position: "生存",
+    },
+    character4: {
+      character: WAN_YE,
+      position: "增伤",
+    },
   },
 ];
