@@ -15,6 +15,8 @@
  */
 
 import HU_TAO_IMG from "./img/hutao.png";
+import KLEE_IMG from "./img/klee.png";
+import EMILIE_IMG from "./img/emilie.png";
 import BARBARA_IMG from "./img/barbara.png";
 import XIAO_GONG_IMG from "./img/xiaogong.png";
 import XIANG_LING_IMG from "./img/xiangling.png";
@@ -47,6 +49,18 @@ export const BARBARA: Character = {
   nameZh: "芭芭拉",
   configurationURL: "https://barbara.qubitpi.org",
   characterImage: BARBARA_IMG,
+};
+
+export const KLEE: Character = {
+  nameZh: "可莉",
+  configurationURL: "https://klee.qubitpi.org",
+  characterImage: KLEE_IMG,
+};
+
+export const EMILIE: Character = {
+  nameZh: "艾梅莉埃",
+  configurationURL: "https://emilie.qubitpi.org",
+  characterImage: EMILIE_IMG,
 };
 
 export const XIAO_GONG: Character = {
