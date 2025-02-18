@@ -17,9 +17,11 @@ import {
   ARLECCHINO,
   BARBARA,
   CITLALI,
+  EMILIE,
   FISCHL,
   HU_TAO,
   KE_QING,
+  KLEE,
   WAN_YE,
   XIANG_LING,
   XIAO_GONG,
@@ -32,26 +34,6 @@ export const videos = [
     bilibiliVideoId: "BV1ShNmeREon",
     character1: {
       character: ARLECCHINO,
-      position: "主 C",
-    },
-    character2: {
-      character: XIANG_LING,
-      position: "副 C",
-    },
-    character3: {
-      character: CITLALI,
-      position: "增伤",
-    },
-    character4: {
-      character: WAN_YE,
-      position: "增伤",
-    },
-  },
-  {
-    youtubeVideoId: "6L6V_TnSAS8",
-    bilibiliVideoId: "BV1pprrYeEe5",
-    character1: {
-      character: XIAO_GONG,
       position: "主 C",
     },
     character2: {
@@ -84,6 +66,46 @@ export const videos = [
     },
     character4: {
       character: CITLALI,
+      position: "增伤",
+    },
+  },
+  {
+    youtubeVideoId: "tQRgmOLS_0I",
+    bilibiliVideoId: "BV1xEAeezE3G",
+    character1: {
+      character: KLEE,
+      position: "主 C",
+    },
+    character2: {
+      character: EMILIE,
+      position: "副 C",
+    },
+    character3: {
+      character: CITLALI,
+      position: "增伤",
+    },
+    character4: {
+      character: WAN_YE,
+      position: "增伤",
+    },
+  },
+  {
+    youtubeVideoId: "6L6V_TnSAS8",
+    bilibiliVideoId: "BV1pprrYeEe5",
+    character1: {
+      character: XIAO_GONG,
+      position: "主 C",
+    },
+    character2: {
+      character: XIANG_LING,
+      position: "副 C",
+    },
+    character3: {
+      character: CITLALI,
+      position: "增伤",
+    },
+    character4: {
+      character: WAN_YE,
       position: "增伤",
     },
   },
